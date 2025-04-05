@@ -8,7 +8,7 @@
       { "name": "鰹顆粒だし", "formula": "適量", "isFixedText": true, "unit": "" },
       { "name": "油", "formula": "適量", "isFixedText": true, "unit": "" }
     ],
-    "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
+    "defaultSaltInfo": "塩分濃度: 1.5% (醤油1gあたり塩分含有量: 0.15g)",
     "saltFormula": "soy * 0.15 / weight * 100"
   },
   "nimono": {
@@ -21,7 +21,7 @@
       { "name": "和風顆粒だし", "formula": "適量", "isFixedText": true, "unit": "" },
       { "name": "水", "formula": "ひたひた", "isFixedText": true, "unit": "" }
     ],
-    "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
+    "defaultSaltInfo": "塩分濃度: 1.5% (醤油1gあたり塩分含有量: 0.15g)",
     "saltFormula": "soy * 0.15 / weight * 100"
   },
   "karaage": {

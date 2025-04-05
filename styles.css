@@ -330,3 +330,19 @@ button.icon {
 .weight-input {
     text-align: right;
 }
+
+/* ボタングループと見出しの間隔調整 */
+@media (max-width: 768px) {
+    .card-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .card-title h2 {
+        margin-bottom: 12px;
+    }
+    
+    .actions {
+        align-self: flex-end;
+    }
+}
