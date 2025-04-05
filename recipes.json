@@ -5,8 +5,8 @@
     "condiments": [
       { "name": "醤油", "formula": "total * 0.015 / 0.15", "unit": "g" },
       { "name": "味醂", "formula": "soy / 2 * 3", "unit": "g" },
-      { "name": "鰹顆粒だし", "formula": "適量", "unit": "" },
-      { "name": "油", "formula": "適量", "unit": "" }
+      { "name": "鰹顆粒だし", "formula": "適量", "isFixedText": true, "unit": "" },
+      { "name": "油", "formula": "適量", "isFixedText": true, "unit": "" }
     ],
     "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
     "saltFormula": "soy * 0.15 / weight * 100"
@@ -18,8 +18,8 @@
       { "name": "醤油", "formula": "total * 0.012 / 0.15", "unit": "g" },
       { "name": "砂糖", "formula": "total * 0.04", "unit": "g" },
       { "name": "酒", "formula": "soy * 2.1", "unit": "g" },
-      { "name": "和風顆粒だし", "formula": "適量", "unit": "" },
-      { "name": "水", "formula": "ひたひた", "unit": "" }
+      { "name": "和風顆粒だし", "formula": "適量", "isFixedText": true, "unit": "" },
+      { "name": "水", "formula": "ひたひた", "isFixedText": true, "unit": "" }
     ],
     "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
     "saltFormula": "soy * 0.15 / weight * 100"
@@ -32,9 +32,9 @@
       { "name": "酒", "formula": "soy", "unit": "g" },
       { "name": "生姜", "formula": "total * 0.025", "unit": "g" },
       { "name": "ニンニク", "formula": "ginger", "unit": "g" },
-      { "name": "混合胡椒", "formula": "適量", "unit": "" },
-      { "name": "グルタミン酸(味の素)", "formula": "お好みで", "unit": "" },
-      { "name": "顆粒鶏ガラだし等", "formula": "適量", "unit": "" }
+      { "name": "混合胡椒", "formula": "適量", "isFixedText": true, "unit": "" },
+      { "name": "グルタミン酸(味の素)", "formula": "お好みで", "isFixedText": true, "unit": "" },
+      { "name": "顆粒鶏ガラだし等", "formula": "適量", "isFixedText": true, "unit": "" }
     ],
     "defaultSaltInfo": "塩分濃度: 1.1% (醤油1gあたり塩分含有量: 0.15g)",
     "saltFormula": "固定値:1.1"
@@ -47,12 +47,8 @@
       { "name": "醤油", "formula": "total * 0.003 / 0.15", "unit": "g" },
       { "name": "砂糖", "formula": "total * 0.04", "unit": "g" },
       { "name": "酒", "formula": "total * 0.08", "unit": "g" },
-      {
-        "name": "生姜、ニンニク、豆板醤",
-        "formula": "お好みで適量",
-        "unit": ""
-      },
-      { "name": "油", "formula": "適量", "unit": "" }
+      { "name": "生姜、ニンニク、豆板醤", "formula": "お好みで適量", "isFixedText": true, "unit": "" },
+      { "name": "油", "formula": "適量", "isFixedText": true, "unit": "" }
     ],
     "defaultSaltInfo": "塩分濃度: 1.2%<br>みそ塩分濃度: 0.9%<br>醤油塩分濃度: 0.3%",
     "saltFormula": "固定値:1.2"

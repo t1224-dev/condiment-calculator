@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>調味料計算機 - Condiment Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>調味料計算機</h1>
-            <p>材料の重量を入力して、最適な調味料の量を計算します</p>
-        </header>
-        
-        <div class="recipe-selector">
-            <h2>レシピを選択</h2>
-            <div class="recipe-filters">
-                <div class="filter-group">
-                    <label for="cuisine-filter">料理ジャンル</label>
-                    <div class="md-select">
-                        <select id="cuisine-filter" class="form-control">
-                            <option value="all">すべて</option>
-                            <option value="japanese">和風</option>
-                            <option value="western">洋風</option>
-                            <option value="chinese">中華風</option>
-                            <option value="korean">韓国風</option>
-                            <option value="other">その他</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="filter-group">
-                    <label for="recipe-search">レシピ名検索</label>
-                    <input type="text" id="recipe-search" placeholder="レシピ名を入力">
-                </div>
+      <header>
+        <h1>調味料計算機</h1>
+        <p>材料の重量を入力して、最適な調味料の量を計算します</p>
+      </header>
+
+      <div class="recipe-selector">
+        <h2>レシピを選択</h2>
+        <div class="recipe-filters">
+          <div class="filter-group">
+            <label for="cuisine-filter">料理ジャンル</label>
+            <div class="md-select">
+              <select id="cuisine-filter" class="form-control">
+                <option value="all">すべて</option>
+                <option value="japanese">和風</option>
+                <option value="western">洋風</option>
+                <option value="chinese">中華風</option>
+                <option value="korean">韓国風</option>
+                <option value="other">その他</option>
+              </select>
             </div>
-            <!-- Recipe tabs will be generated dynamically -->
-            <div id="recipe-tabs-container" class="recipe-tabs"></div>
+          </div>
+          <div class="filter-group">
+            <label for="recipe-search">レシピ名検索</label>
+            <input
+              type="text"
+              id="recipe-search"
+              placeholder="レシピ名を入力"
+            />
+          </div>
         </div>
+        <!-- Recipe tabs will be generated dynamically -->
+        <div id="recipe-tabs-container" class="recipe-tabs"></div>
+      </div>
 
-        <!-- Main card will be generated dynamically -->
-        <div id="main-card-container"></div>
+      <!-- Main card will be generated dynamically -->
+      <div id="main-card-container"></div>
 
-        <!-- Result card will be generated dynamically -->
-        <div id="result-card-container"></div>
+      <!-- Result card will be generated dynamically -->
+      <div id="result-card-container"></div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
