@@ -1,0 +1,332 @@
+:root {
+    --md-primary: #006D77;
+    --md-primary-dark: #004e55;
+    --md-secondary: #E29578;
+    --md-background: #f5f5f5;
+    --md-surface: #ffffff;
+    --md-on-surface: #1d1d1d;
+    --md-on-primary: #ffffff;
+    --md-error: #B00020;
+    --md-elevation-1: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12);
+    --md-elevation-2: 0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12);
+    --md-radius: 8px;
+    --md-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background-color: var(--md-background);
+    color: var(--md-on-surface);
+    line-height: 1.5;
+    padding: 16px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 24px 0;
+    text-align: center;
+}
+
+h1 {
+    color: var(--md-primary);
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: var(--md-primary-dark);
+    font-size: 1.4rem;
+    margin: 16px 0;
+}
+
+.card {
+    background-color: var(--md-surface);
+    border-radius: var(--md-radius);
+    box-shadow: var(--md-elevation-1);
+    padding: 16px;
+    margin-bottom: 24px;
+    transition: box-shadow var(--md-transition);
+}
+
+.card:hover {
+    box-shadow: var(--md-elevation-2);
+}
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.ingredient-list, .result-list {
+    display: grid;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .ingredient-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.input-group {
+    margin-bottom: 8px;
+}
+
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--md-radius);
+    font-size: 16px;
+    transition: border-color var(--md-transition);
+    background-color: var(--md-surface);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--md-primary);
+}
+
+/* Material Design 3 Select */
+.md-select {
+    position: relative;
+    width: 100%;
+}
+
+.md-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+}
+
+.md-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--md-primary);
+    pointer-events: none;
+}
+
+button {
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
+    border: none;
+    border-radius: var(--md-radius);
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--md-transition);
+}
+
+button:hover {
+    background-color: var(--md-primary-dark);
+}
+
+button.secondary {
+    background-color: var(--md-secondary);
+}
+
+button.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.result-card {
+    background-color: var(--md-primary);
+}
+
+.result-card h2 {
+    color: white;
+    margin-bottom: 16px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item span {
+    color: white;
+    font-weight: 500;
+}
+
+.info-text {
+    font-size: 14px;
+    color: white;
+    margin-top: 8px;
+}
+
+.recipe-selector {
+    margin-bottom: 24px;
+}
+
+.recipe-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.recipe-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+.recipe-tab {
+    padding: 8px 16px;
+    background-color: #eee;
+    border-radius: var(--md-radius);
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recipe-tab.active {
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
+}
+
+.cuisine-tag {
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+.cuisine-tag.japanese {
+    background-color: #E63946;
+    color: white;
+}
+
+.cuisine-tag.western {
+    background-color: #457B9D;
+    color: white;
+}
+
+.cuisine-tag.chinese {
+    background-color: #F77F00;
+    color: white;
+}
+
+.cuisine-tag.korean {
+    background-color: #7209B7;
+    color: white;
+}
+
+.cuisine-tag.other {
+    background-color: #606C38;
+    color: white;
+}
+
+.condiment-info {
+    background-color: rgba(0,109,119,0.1);
+    border-radius: var(--md-radius);
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.condiment-info h3 {
+    margin-bottom: 8px;
+    color: var(--md-primary-dark);
+}
+
+.condiment-info ul {
+    list-style-type: none;
+}
+
+.condiment-info li {
+    padding: 4px 0;
+}
+
+/* 材料入力フィールドのスタイル */
+.ingredient-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2px;
+}
+
+/* 削除ボタン共通スタイル */
+.delete-ingredient {
+    background: none;
+    color: var(--md-error);
+    padding: 2px 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.ingredient-fields {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+}
+
+/* 共通ラベルスタイル */
+.ingredient-fields label,
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.weight-input {
+    text-align: right;
+}

@@ -1,0 +1,71 @@
+{
+  "teriyaki": {
+    "name": "照り焼き系",
+    "cuisine": "japanese",
+    "condiments": [
+      { "name": "醤油", "formula": "total * 0.015 / 0.15", "unit": "g" },
+      { "name": "味醂", "formula": "soy / 2 * 3", "unit": "g" },
+      { "name": "鰹顆粒だし", "formula": "適量", "unit": "" },
+      { "name": "油", "formula": "適量", "unit": "" }
+    ],
+    "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
+    "saltFormula": "soy * 0.15 / weight * 100"
+  },
+  "nimono": {
+    "name": "和風煮物系",
+    "cuisine": "japanese",
+    "condiments": [
+      { "name": "醤油", "formula": "total * 0.012 / 0.15", "unit": "g" },
+      { "name": "砂糖", "formula": "total * 0.04", "unit": "g" },
+      { "name": "酒", "formula": "soy * 2.1", "unit": "g" },
+      { "name": "和風顆粒だし", "formula": "適量", "unit": "" },
+      { "name": "水", "formula": "ひたひた", "unit": "" }
+    ],
+    "defaultSaltInfo": "塩分濃度: 0.0% (醤油1gあたり塩分含有量: 0.15g)",
+    "saltFormula": "soy * 0.15 / weight * 100"
+  },
+  "karaage": {
+    "name": "唐揚げ系",
+    "cuisine": "japanese",
+    "condiments": [
+      { "name": "醤油", "formula": "total * 0.011 / 0.15", "unit": "g" },
+      { "name": "酒", "formula": "soy", "unit": "g" },
+      { "name": "生姜", "formula": "total * 0.025", "unit": "g" },
+      { "name": "ニンニク", "formula": "ginger", "unit": "g" },
+      { "name": "混合胡椒", "formula": "適量", "unit": "" },
+      { "name": "グルタミン酸(味の素)", "formula": "お好みで", "unit": "" },
+      { "name": "顆粒鶏ガラだし等", "formula": "適量", "unit": "" }
+    ],
+    "defaultSaltInfo": "塩分濃度: 1.1% (醤油1gあたり塩分含有量: 0.15g)",
+    "saltFormula": "固定値:1.1"
+  },
+  "misostir": {
+    "name": "みそ炒め系",
+    "cuisine": "japanese",
+    "condiments": [
+      { "name": "みそ", "formula": "total * 0.009 / 0.13", "unit": "g" },
+      { "name": "醤油", "formula": "total * 0.003 / 0.15", "unit": "g" },
+      { "name": "砂糖", "formula": "total * 0.04", "unit": "g" },
+      { "name": "酒", "formula": "total * 0.08", "unit": "g" },
+      {
+        "name": "生姜、ニンニク、豆板醤",
+        "formula": "お好みで適量",
+        "unit": ""
+      },
+      { "name": "油", "formula": "適量", "unit": "" }
+    ],
+    "defaultSaltInfo": "塩分濃度: 1.2%<br>みそ塩分濃度: 0.9%<br>醤油塩分濃度: 0.3%",
+    "saltFormula": "固定値:1.2"
+  },
+  "misomari": {
+    "name": "味噌漬け焼き",
+    "cuisine": "japanese",
+    "condiments": [
+      { "name": "みそ", "formula": "total * 0.02 / 0.13", "unit": "g" },
+      { "name": "みりん", "formula": "miso * 0.05 * 2.4", "unit": "g" },
+      { "name": "酒", "formula": "miso * 0.04", "unit": "g" }
+    ],
+    "defaultSaltInfo": "塩分濃度: 2.0% (みそ1gあたり塩分含有量: 0.13g)",
+    "saltFormula": "固定値:2.0"
+  }
+}
