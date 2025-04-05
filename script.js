@@ -2,6 +2,7 @@
 let recipes = {};
 let currentRecipe = null;
 let ingredientCounter = 0;
+let shouldFocusNewIngredient = false;
 
 // ページの読み込み完了時に実行
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,6 +32,9 @@ async function fetchRecipes() {
         if (firstRecipeKey) {
             selectRecipe(firstRecipeKey);
         }
+        
+        // ページの一番上にスクロール
+        window.scrollTo(0, 0);
     } catch (error) {
         console.error('レシピの読み込みに失敗しました:', error);
         document.getElementById('recipe-tabs-container').innerHTML = 
@@ -190,6 +194,9 @@ function selectRecipe(recipeKey) {
     
     // 結果カードを生成
     generateResultCard(recipes[recipeKey]);
+    
+    // ページの一番上にスクロール
+    window.scrollTo(0, 0);
 }
 
 // メインカードを生成
@@ -218,7 +225,11 @@ function generateMainCard(recipe) {
     `;
     
     // 材料追加ボタンのイベント
-    document.getElementById('add-ingredient').addEventListener('click', addIngredient);
+    document.getElementById('add-ingredient').addEventListener('click', () => {
+        shouldFocusNewIngredient = true;
+        addIngredient();
+        shouldFocusNewIngredient = false;
+    });
     
     // 計算ボタンのイベント
     document.getElementById('calculate-button').addEventListener('click', calculateCondiments);
@@ -283,8 +294,11 @@ function addIngredient() {
         deleteIngredient(this.dataset.id);
     });
     
-    // 新しく追加した入力フィールドにフォーカス
-    ingredientElement.querySelector('input[type="text"]').focus();
+    // ユーザーが明示的に材料追加ボタンをクリックした場合のみフォーカスを設定
+    if (shouldFocusNewIngredient) {
+        const inputField = ingredientElement.querySelector('input[type="text"]');
+        inputField.focus({preventScroll: true});
+    }
 }
 
 // 材料入力フィールドを削除
